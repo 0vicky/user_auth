@@ -1,0 +1,14 @@
+{% block content %}
+  <h2>Create an Account</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="id_user_type">User Type:</label>
+    <select name="user_type" id="id_user_type">
+      <option value="patient">Patient</option>
+      <option value="doctor">Doctor</option>
+    </select>
+    <br><br>
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+<h2>Doctor Dashboard</h2>
+<p>Welcome, {{ doctor.user.username }}</p>
+<p>Name: {{ doctor.user.first_name }} {{ doctor.user.last_name }}</p>
+<p>Address: {{ doctor.address_line1 }}</p>
+<p>City: {{ doctor.city }}</p>
+<p>state:{{ doctor.state }}</p>
+<p>pincode:{{ doctor.pincode }}</p>
+<p>Profile Picture:</p>
+{% if doctor.profile_picture and doctor.profile_picture.file %}
+    <img src="{{ doctor.profile_picture.url }}" alt="Profile Picture">
+{% else %}
+    <p>No profile picture available</p>
+{% endif %}

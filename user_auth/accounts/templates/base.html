@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Application</title>
+  <!-- Include your CSS and JavaScript files here -->
+</head>
+<body>
+  <header>
+    <!-- Your header content goes here -->
+    <h1>Your Application</h1>
+  </header>
+
+  <nav>
+    <!-- Your navigation menu goes here -->
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/signup/">Signup</a></li>
+      <li><a href="/login/">Login</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- The main content of each page will be inserted here -->
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <!-- Your footer content goes here -->
+    <p>&copy; {{ current_year }} Your Application. All rights reserved.</p>
+  </footer>
+</body>
+</html>
